@@ -43,7 +43,7 @@ void run_client()
   client.Destroy();
 }
 
-void main()
+int main()
 {
   std::thread server(run_server);
   std::this_thread::sleep_for(std::chrono::milliseconds(2000));
@@ -52,4 +52,6 @@ void main()
 
   client.join();
   server.join();
+  
+  return 0;
 }
