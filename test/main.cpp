@@ -31,7 +31,7 @@ void run_client()
 {
   eCAL::CTcpClient client;
 
-  client.Create("localhost", g_port);
+  client.Create("buildroot", g_port);
 
   auto seconds2run(60);
   while (seconds2run--)
